@@ -16,5 +16,14 @@
     },
     "estimate": 930.8824204895075,
     "discount": 225.88242048950747
+  },
+  {
+    "deal": {
+      "product_description": "The Poly Studio P21 is a 21.5-inch 1080p LED personal meeting display that transforms your video calls into a professional experience. This all-in-one design features a built-in privacy shutter, stereo speakers, and an advanced 1080p webcam with manual pan, tilt, and zoom control. It also offers 5W wireless charging for mobile devices, ensuring your gadgets stay powered during important meetings. With an ambient light sensor and touch control, it allows users to adjust the vanity lighting for a more flattering video experience, making it a perfect addition to any home office.",
+      "price": 30.0,
+      "url": "https://www.dealnews.com/products/Poly-Studio-P21-21-5-1080-p-LED-Personal-Meeting-Display/378335.html?iref=rss-c39"
+    },
+    "estimate": 599.5,
+    "discount": 569.5
   }
 ]

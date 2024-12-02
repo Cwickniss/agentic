@@ -1,5 +1,3 @@
-# LLM Engineering - Master AI and LLMs
-
 ## Setup instructions for Mac
 
 Welcome, Mac people!
@@ -37,9 +35,9 @@ cd ~/Documents/Projects
 
 Enter this in the terminal in the Projects folder:
 
-`git clone https://github.com/ed-donner/llm_engineering.git`
+`git clone https://github.com/ed-donner/agentic.git`
 
-This creates a new directory `llm_engineering` within your Projects folder and downloads the code for the class. Do `cd llm_engineering` to go into it. This `llm_engineering` directory is known as the "project root directory".
+This creates a new directory `agentic` within your Projects folder and downloads the code for the class. Do `cd agentic` to go into it. This `agentic` directory is known as the "project root directory".
 
 ### Part 2: Install Anaconda environment
 
@@ -53,16 +51,16 @@ If this Part 2 gives you any problems, there is an alternative Part 2B below tha
 2. **Set up the environment:**
 
 - Open a new Terminal (Applications > Utilities > Terminal)
-- Navigate to the "project root directory" using `cd ~/Documents/Projects/llm_engineering` (replace this path as needed with the actual path to the llm_engineering directory, your locally cloned version of the repo). Do `ls` and check you can see subdirectories for each week of the course.
-- Create the environment: `conda env create -f environment.yml`
+- Navigate to the "project root directory" using `cd ~/Documents/Projects/agentic` (replace this path as needed with the actual path to the agentic directory, your locally cloned version of the repo). Do `ls` and check you can see subdirectories for each week of the course.
+- Create the environment: `conda env create --f environment.yml`
 - Wait for a few minutes for all packages to be installed - in some cases, this can literally take 20-30 minutes if you've not used Anaconda before, and even longer depending on your internet connection. Important stuff is happening! If this runs for more than 1 hour 15 mins, or gives you other problems, please go to Part 2B instead.
-- You have now built an isolated, dedicated AI environment for engineering LLMs, running vector datastores, and so much more! You now need to **activate** it using this command: `conda activate llms`  
+- You have now built an isolated, dedicated AI environment for engineering LLMs, running vector datastores, and so much more! You now need to **activate** it using this command: `conda activate agentic`  
 
-You should see `(llms)` in your prompt, which indicates you've activated your new environment.
+You should see `(agentic)` in your prompt, which indicates you've activated your new environment.
 
 3. **Start Jupyter Lab:**
 
-- In the Terminal window, from within the `llm_engineering` folder, type: `jupyter lab`
+- In the Terminal window, from within the `agentic` folder, type: `jupyter lab`
 
 ...and Jupyter Lab should open up in a browser. If you've not seen Jupyter Lab before, I'll explain it in a moment! Now close the jupyter lab browser tab, and close the Terminal, and move on to Part 3.
 
@@ -75,35 +73,31 @@ If not, it's not a big deal, but we might need to come back to this later if you
 You can download python here:  
 https://www.python.org/downloads/
 
-2. Navigate to the "project root directory" using `cd ~/Documents/Projects/llm_engineering` (replace this path with the actual path to the llm_engineering directory, your locally cloned version of the repo). Do `ls` and check you can see subdirectories for each week of the course.  
+2. Navigate to the "project root directory" using `cd ~/Documents/Projects/agentic` (replace this path with the actual path to the agentic directory, your locally cloned version of the repo). Do `ls` and check you can see subdirectories for each week of the course.  
 
 Then, create a new virtual environment with this command:  
-`python -m venv llms`
+`python -m venv agentic`
 
 3. Activate the virtual environment with  
-`source llms/bin/activate`
-You should see (llms) in your command prompt, which is your sign that things are going well.
+`source agentic/bin/activate`
+You should see (agentic) in your command prompt, which is your sign that things are going well.
 
 4. Run `pip install -r requirements.txt`  
 This may take a few minutes to install.
 
 5. **Start Jupyter Lab:**
 
-From within the `llm_engineering` folder, type: `jupyter lab`  
-...and Jupyter Lab should open up, ready for you to get started. Open the `week1` folder and double click on `day1.ipynb`. Success! Now close down jupyter lab and move on to Part 3.
+From within the `agentic` folder, type: `jupyter lab`  
+...and Jupyter Lab should open up, ready for you to get started. Open the `workshop` folder and double click on `agent1.ipynb`. Success! Now close down jupyter lab and move on to Part 3.
 
 If there are any problems, contact me!
 
 ### Part 3 - OpenAI key (OPTIONAL but recommended)
 
-Particularly during weeks 1 and 2 of the course, you'll be writing code to call the APIs of Frontier models (models at the forefront of AI).
-
-For week 1, you'll only need OpenAI, and you can add the others if you wish later on.
-
 1. Create an OpenAI account if you don't have one by visiting:
 https://platform.openai.com/
 
-2. OpenAI asks for a minimum credit to use the API. For me in the US, it's \$5. The API calls will spend against this \$5. On this course, we'll only use a small portion of this. I do recommend you make the investment as you'll be able to put it to excellent use. But if you'd prefer not to pay for the API, I give you an alternative in the course using Ollama.
+2. OpenAI asks for a minimum credit to use the API. For me in the US, it's \$5. The API calls will spend against this \$5. On this course, we'll only use a small portion of this. I do recommend you make the investment as you'll be able to put it to excellent use.
 
 You can add your credit balance to OpenAI at Settings > Billing:  
 https://platform.openai.com/settings/organization/billing/overview
@@ -114,13 +108,7 @@ I recommend you disable the automatic recharge!
 
 The webpage where you set up your OpenAI key is at https://platform.openai.com/api-keys - press the green 'Create new secret key' button and press 'Create secret key'. Keep a record of the API key somewhere private; you won't be able to retrieve it from the OpenAI screens in the future. It should start `sk-proj-`.
 
-In week 2 we will also set up keys for Anthropic and Google, which you can do here when we get there.  
-- Claude API at https://console.anthropic.com/ from Anthropic
-- Gemini API at https://ai.google.dev/gemini-api from Google
-
-Later in the course you'll be using the fabulous HuggingFace platform; an account is available for free at https://huggingface.co - you can create an API token from the Avatar menu >> Settings >> Access Tokens.
-
-And in Week 6/7 you'll be using the terrific Weights & Biases at https://wandb.ai to watch over your training batches. Accounts are also free, and you can set up a token in a similar way.
+You'll be using the fabulous HuggingFace platform; an account is available for free at https://huggingface.co - you can create an API token from the Avatar menu >> Settings >> Access Tokens.
 
 ### PART 4 - .env file
 
@@ -128,7 +116,7 @@ When you have these keys, please create a new file called `.env` in your project
 
 1. Open Terminal (Applications > Utilities > Terminal)
 
-2. Navigate to the "project root directory" using `cd ~/Documents/Projects/llm_engineering` (replace this path with the actual path to the llm_engineering directory, your locally cloned version of the repo).
+2. Navigate to the "project root directory" using `cd ~/Documents/Projects/agentic` (replace this path with the actual path to the agentic directory, your locally cloned version of the repo).
 
 3. Create the .env file with
 
@@ -138,12 +126,6 @@ nano .env
 
 ```
 OPENAI_API_KEY=xxxx
-```
-
-If you have other keys, you can add them too, or come back to this in future weeks:  
-```
-GOOGLE_API_KEY=xxxx
-ANTHROPIC_API_KEY=xxxx
 HF_TOKEN=xxxx
 ```
 
@@ -165,18 +147,18 @@ This file won't appear in Jupyter Lab because jupyter hides files starting with 
 
 - Open Terminal (Applications > Utilities > Terminal)
   
-- Navigate to the "project root directory" using `cd ~/Documents/Projects/llm_engineering` (replace this path with the actual path to the llm_engineering directory, your locally cloned version of the repo). Do `ls` and check you can see subdirectories for each week of the course.  
+- Navigate to the "project root directory" using `cd ~/Documents/Projects/agentic` (replace this path with the actual path to the agentic directory, your locally cloned version of the repo). Do `ls` and check you can see subdirectories for each week of the course.  
 
-- Activate your environment with `conda activate llms` (or `source llms/bin/activate` if you used the alternative approach in Part 2B)
+- Activate your environment with `conda activate agentic` (or `source agentic/bin/activate` if you used the alternative approach in Part 2B)
 
-- You should see (llms) in your prompt which is your sign that all is well. And now, type: `jupyter lab` and Jupyter Lab should open up, ready for you to get started. Open the `week1` folder and double click on `day1.ipynb`.
+- You should see (agentic) in your prompt which is your sign that all is well. And now, type: `jupyter lab` and Jupyter Lab should open up, ready for you to get started. Open the `workshop` folder and double click on `agent1.ipynb`.
 
 And you're off to the races!
 
-Note that any time you start jupyter lab in the future, you'll need to follow these Part 5 instructions to start it from within the `llm_engineering` directory with the `llms` environment activated.
+Note that any time you start jupyter lab in the future, you'll need to follow these Part 5 instructions to start it from within the `agentic` directory with the `agentic` environment activated.
 
-For those new to Jupyter Lab / Jupyter Notebook, it's a delightful Data Science environment where you can simply hit shift+return in any cell to run it; start at the top and work your way down! I've included a notebook called 'Guide to Jupyter' that shows you more features. When we move to Google Colab in Week 3, you'll experience the same interface for Python runtimes in the cloud. 
+For those new to Jupyter Lab / Jupyter Notebook, it's a delightful Data Science environment where you can simply hit shift+return in any cell to run it; start at the top and work your way down! There's a notebook in the week1 folder with a [Guide to Jupyter Lab](Guide%20to%20Jupyter.ipynb), and an [Intermediate Python](Intermediate%20Python.ipynb) tutorial, if that would be helpful.
 
-If you have any problems, I've included a notebook in week1 called [troubleshooting.ipynb](week1/troubleshooting.ipynb) to figure it out.
+If you have any problems, I've included a notebook called [troubleshooting.ipynb](troubleshooting.ipynb) to figure it out.
 
 Please do message me or email me at ed@edwarddonner.com if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
