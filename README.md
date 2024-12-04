@@ -8,10 +8,12 @@ Welcome to the code to accompany the Agent workshop.
 
 ### A note before you begin
 
-I'm here to help you be most successful with your learning! If you hit any snafus, or if you have any ideas on how I can improve the course, please do reach out in the platform or by emailing me direct (ed@edwarddonner.com). It's always great to connect with people on LinkedIn to build up the community - you'll find me here:  
+I'm here to help you be most successful with your learning! If you hit any snafus, please do reach out by emailing me direct (ed@edwarddonner.com). It's always great to connect with people on LinkedIn - you'll find me here:  
 https://www.linkedin.com/in/eddonner/
 
-If you'd like to go more deeply into LLMs and Agents, I'm running a number of [Live Events](https://www.oreilly.com/search/?q=author%3A%20%22Ed%20Donner%22) with O'Reilly and Pearson; I also have a comprehensive 8-week [Mastering LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?referralCode=35EB41EBB11DD247CF54) course that builds this entire Agentic AI platform from the ground up, including RAG and fine-tuning.
+If you'd like to go more deeply into LLMs and Agents:  
+- I'm running a number of [Live Events](https://www.oreilly.com/search/?q=author%3A%20%22Ed%20Donner%22) with O'Reilly and Pearson
+- I also have a comprehensive, hands-on 8-week [Mastering LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?referralCode=35EB41EBB11DD247CF54) course that builds this entire Agentic AI platform from the ground up, including RAG and fine-tuning.
 
 ## Setup instructions
 
