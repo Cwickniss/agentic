@@ -13,12 +13,10 @@ transformers
 tqdm
 openai
 gradio
-tiktoken
 datasets
 sentencepiece
-matplotlib
 anthropic
-scikit-learn
+google-generativeai
 unstructured
 chromadb
 plotly
@@ -27,7 +25,6 @@ beautifulsoup4
 modal
 ollama
 accelerate
-sentencepiece
 bitsandbytes
 psutil
 setuptools

@@ -15,13 +15,11 @@ dependencies:
   - jupyterlab
   - ipywidgets
   - pyarrow
-  - anthropic
   - matplotlib
   - scikit-learn
   - tiktoken
   - jupyter-dash
   - plotly
-  - duckdb
   - feedparser
   - pip:
     - transformers
@@ -31,6 +29,8 @@ dependencies:
     - sentencepiece
     - bitsandbytes
     - openai
+    - anthropic
+    - google-generativeai
     - gradio
     - gensim
     - modal

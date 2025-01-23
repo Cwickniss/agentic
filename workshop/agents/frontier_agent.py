@@ -20,6 +20,7 @@ class FrontierAgent(Agent):
     color = Agent.YELLOW
 
     MODEL = "gpt-4o-mini"
+    PREPROCESS_MODEL = "llama3.2"
     
     def __init__(self, collection):
         """
@@ -28,6 +29,7 @@ class FrontierAgent(Agent):
         """
         self.log("Initializing Frontier Agent")
         self.openai = OpenAI()
+        self.ollama_via_openai = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')
         self.collection = collection
         self.model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
         self.log("Frontier Agent is ready")
@@ -63,12 +65,27 @@ class FrontierAgent(Agent):
             {"role": "assistant", "content": "Price is $"}
         ]
 
+    def preprocess(self, item: str):
+        """
+        Run the description through llama3.2 running locally to make it most suitable for RAG lookup
+        """
+        system_message = "You rewrite product descriptions in a format most suitable for finding similar products in a Knowledge Base"
+        user_message = "Please a short 2-3 sentence description of the following product; your description will be used to find similar products so it should be comprehensive and only about the product. Details:\n"
+        user_message += item
+        user_message += "\n\nNow please reply only with the short description, with no introduction"
+        messages = [{"role": "system", "content": system_message}, {"role": "user", "content": user_message}]
+        response = self.ollama_via_openai.chat.completions.create(model="llama3.2", messages=messages)
+        return response.choices[0].message.content
+
     def find_similars(self, description: str):
         """
         Return a list of items similar to the given one by looking in the Chroma datastore
         """
+        self.log("Frontier Agent is using Llama 3.2 to preprocess the description")
+        preprocessed = self.preprocess(description)
+        self.log("Frontier Agent is vectorizing using all-MiniLM-L6-v2")
+        vector = self.model.encode([preprocessed])
         self.log("Frontier Agent is performing a RAG search of the Chroma datastore to find 5 similar products")
-        vector = self.model.encode([description])
         results = self.collection.query(query_embeddings=vector.astype(float).tolist(), n_results=5)
         documents = results['documents'][0][:]
         prices = [m['price'] for m in results['metadatas'][0][:]]

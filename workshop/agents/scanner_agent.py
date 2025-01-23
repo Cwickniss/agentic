@@ -17,7 +17,7 @@ class ScannerAgent(Agent):
     
     {"deals": [
         {
-            "product_description": "Your clearly expressed summary of the product in 4-5 sentences. Details of the item are much more important than why it's a good deal. Avoid mentioning discounts and coupons; focus on the item itself. There should be a paragpraph of text for each item you choose.",
+            "product_description": "Your clearly expressed summary of the product in 3-4 sentences. Details of the item are much more important than why it's a good deal. Avoid mentioning discounts and coupons; focus on the item itself. There should be a short paragraph of text for each item you choose.",
             "price": 99.99,
             "url": "the url as provided"
         },
@@ -26,7 +26,7 @@ class ScannerAgent(Agent):
     
     USER_PROMPT_PREFIX = """Respond with the most promising 5 deals from this list, selecting those which have the most detailed, high quality product description and a clear price that is greater than 0.
     Respond strictly in JSON, and only JSON. You should rephrase the description to be a summary of the product itself, not the terms of the deal.
-    Remember to respond with a paragraph of text in the product_description field for each of the 5 items that you select.
+    Remember to respond with a short paragraph of text in the product_description field for each of the 5 items that you select.
     Be careful with products that are described as "$XXX off" or "reduced by $XXX" - this isn't the actual price of the product. Only respond with products when you are highly confident about the price. 
     
     Deals:
@@ -84,7 +84,7 @@ class ScannerAgent(Agent):
                     {"role": "system", "content": self.SYSTEM_PROMPT},
                     {"role": "user", "content": user_prompt}
               ],
-                max_tokens=1000,
+                max_tokens=2000,
                 response_format=DealSelection
             )
             result = result.choices[0].message.parsed
@@ -108,9 +108,6 @@ class ScannerAgent(Agent):
            'url': 'https://www.dealnews.com/products/Lenovo/Lenovo-Idea-Pad-Slim-5-7-th-Gen-Ryzen-5-16-Touch-Laptop/485068.html?iref=rss-c39'},
           {'product_description': 'The Dell G15 gaming laptop is equipped with a 6th-generation AMD Ryzen 5 7640HS 6-Core CPU, providing powerful performance for gaming and content creation. It features a 15.6-inch 1080p display with a 120Hz refresh rate, allowing for smooth and responsive gameplay. With 16GB of RAM and a substantial 1TB NVMe M.2 SSD, this laptop ensures speedy performance and plenty of storage for games and applications. Additionally, it includes the Nvidia GeForce RTX 3050 GPU for enhanced graphics and gaming experiences.',
            'price': 650,
-           'url': 'https://www.dealnews.com/products/Dell/Dell-G15-Ryzen-5-15-6-Gaming-Laptop-w-Nvidia-RTX-3050/485067.html?iref=rss-c39'},
-          {'product_description': 'The certified refurbished iRobot Roomba j7+ is a self-emptying robot vacuum that simplifies floor cleaning with minimal effort. Equipped with WiFi connectivity, it allows for smartphone control and can be integrated into smart home systems. The vacuum is designed to recognize and avoid obstacles, ensuring a thorough clean without interruptions. It includes a 2-year warranty backed by Allstate, providing peace of mind alongside its powerful cleaning capabilities.',
-           'price': 230,
-           'url': 'https://www.dealnews.com/products/iRobot/iRobot-Roomba-j7-Wi-Fi-Self-Emptying-Robot-Vacuum/293669.html?iref=rss-f1912'}]}
+           'url': 'https://www.dealnews.com/products/Dell/Dell-G15-Ryzen-5-15-6-Gaming-Laptop-w-Nvidia-RTX-3050/485067.html?iref=rss-c39'}]}
         return DealSelection(**results)
                 

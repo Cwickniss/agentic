@@ -1,10 +1,10 @@
-# Agentic AI
+# Hands-On LLM Engineering including Agentic AI Project
 
-## "The Price Is Right" Deal Hunting Agent
+## A repo for LLM Builders - Hands-on with LLMs and Agents
 
-![Price is right](price_agent.jpg)
+![Hands on LLM Engineering](handson.jpg)
 
-Welcome to the code to accompany the Agent workshop.
+Welcome to the code to accompany the hand-on LLM engineering workshop.
 
 ### A note before you begin
 
@@ -14,6 +14,15 @@ https://www.linkedin.com/in/eddonner/
 If you'd like to go more deeply into LLMs and Agents:  
 - I'm running a number of [Live Events](https://www.oreilly.com/search/?q=author%3A%20%22Ed%20Donner%22) with O'Reilly and Pearson
 - I also have a comprehensive, hands-on 8-week [Mastering LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?referralCode=35EB41EBB11DD247CF54) course that builds this entire Agentic AI platform from the ground up, including RAG and fine-tuning.
+
+## Pre-Setup: running Ollama locally with Open-Source
+
+Before the full setup, try installing Ollama so you can see results immediately!
+1. Download and install Ollama from https://ollama.com noting that on a PC you might need to have administrator permissions for the install to work properly
+2. On a PC, start a Command prompt / Powershell (Press Win + R, type `cmd`, and press Enter). On a Mac, start a Terminal (Applications > Utilities > Terminal).
+3. Run `ollama run llama3.2` or for smaller machines try `ollama run llama3.2:1b` - **please note** steer clear of Meta's latest model llama3.3 because at 70B parameters that's way too large for most home computers!  
+4. If this doesn't work, you may need to run `ollama serve` in another Powershell (Windows) or Terminal (Mac), and try step 3 again
+5. And if that doesn't work on your box, I've set up this on the cloud. This is on Google Colab, which will need you to have a Google account to sign in, but is free:  https://colab.research.google.com/drive/1-_f5XZPsChvfU1sJ0QqCePtIuc55LSdu?usp=sharing
 
 ## Setup instructions
 
@@ -28,6 +37,32 @@ Hopefully I've done a decent job of making these guides bulletproof - but please
 During this example project, I'll suggest you try out the leading models at the forefront of progress, known as the Frontier models. These services have some charges, but I'll keep cost minimal - like, a few cents at a time. And I'll provide alternatives if you'd prefer not to use them.
 
 Please do monitor your API usage to ensure you're comfortable with spend; I've included links below. There's no need to spend anything more than a couple of dollars for the entire course. Some AI providers such as OpenAI require a minimum credit like \$5 or local equivalent; we should only spend a fraction of it, and you'll have plenty of opportunity to put it to good use in your own projects. But it's not necessary in the least; the important part is that you focus on learning.
+
+### Free alternative to Paid APIs
+
+Here is an alternative if you'd rather not spend anything on APIs:  
+Any time that we have code like:  
+`openai = OpenAI()`  
+You can use this as a direct replacement:  
+`openai = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')`
+
+Below is a full example:
+
+```
+# You need to do this one time on your computer
+!ollama pull llama3.2
+
+from openai import OpenAI
+MODEL = "llama3.2"
+openai = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+
+response = openai.chat.completions.create(
+ model=MODEL,
+ messages=[{"role": "user", "content": "What is 2 + 2?"}]
+)
+
+print(response.choices[0].message.content)
+```
 
 ### The most important part
 

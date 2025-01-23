@@ -81,7 +81,7 @@ class App:
                 return fig
 
             def get_plot():
-                documents, vectors, colors = DealAgentFramework.get_plot_data(max_datapoints=1000)
+                documents, vectors, colors = DealAgentFramework.get_plot_data(max_datapoints=800)
                 # Create the 3D scatter plot
                 fig = go.Figure(data=[go.Scatter3d(
                     x=vectors[:, 0],
