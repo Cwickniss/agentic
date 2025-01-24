@@ -74,7 +74,7 @@ class FrontierAgent(Agent):
         user_message += item
         user_message += "\n\nNow please reply only with the short description, with no introduction"
         messages = [{"role": "system", "content": system_message}, {"role": "user", "content": user_message}]
-        response = self.ollama_via_openai.chat.completions.create(model="llama3.2", messages=messages)
+        response = self.ollama_via_openai.chat.completions.create(model="llama3.2", messages=messages, seed=42)
         return response.choices[0].message.content
 
     def find_similars(self, description: str):
