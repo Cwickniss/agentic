@@ -22,6 +22,7 @@ class Item:
 
     title: str
     price: float
+    text: str
     category: str
     token_count: int = 0
     details: Optional[str]

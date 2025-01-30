@@ -19,7 +19,7 @@ class FrontierAgent(Agent):
     name = "Frontier Agent"
     color = Agent.YELLOW
 
-    MODEL = "gpt-4o-mini"
+    MODEL = "deepseek-chat"
     PREPROCESS_MODEL = "llama3.2"
     
     def __init__(self, collection):
@@ -28,7 +28,15 @@ class FrontierAgent(Agent):
         And setting up the vector encoding model
         """
         self.log("Initializing Frontier Agent")
-        self.openai = OpenAI()
+        deepseek_api_key = os.getenv("DEEPSEEK_API_KEY")
+        if deepseek_api_key:
+            self.client = OpenAI(api_key=deepseek_api_key, base_url="https://api.deepseek.com")
+            self.MODEL = "deepseek-chat"
+            self.log("Frontier Agent is set up with DeepSeek")
+        else:
+            self.client = OpenAI()
+            self.MODEL = "gpt-4o-mini"
+            self.log("Frontier Agent is setting up with OpenAI")
         self.ollama_via_openai = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')
         self.collection = collection
         self.model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
@@ -70,7 +78,7 @@ class FrontierAgent(Agent):
         Run the description through llama3.2 running locally to make it most suitable for RAG lookup
         """
         system_message = "You rewrite product descriptions in a format most suitable for finding similar products in a Knowledge Base"
-        user_message = "Please a short 2-3 sentence description of the following product; your description will be used to find similar products so it should be comprehensive and only about the product. Details:\n"
+        user_message = "Please write a short 2-3 sentence description of the following product; your description will be used to find similar products so it should be comprehensive and only about the product. Details:\n"
         user_message += item
         user_message += "\n\nNow please reply only with the short description, with no introduction"
         messages = [{"role": "system", "content": system_message}, {"role": "user", "content": user_message}]
@@ -102,14 +110,14 @@ class FrontierAgent(Agent):
 
     def price(self, description: str) -> float:
         """
-        Make a call to OpenAI to estimate the price of the described product,
+        Make a call to OpenAI or DeepSeek to estimate the price of the described product,
         by looking up 5 similar products and including them in the prompt to give context
         :param description: a description of the product
         :return: an estimate of the price
         """
         documents, prices = self.find_similars(description)
-        self.log("Frontier Agent is about to call OpenAI with context including 5 similar products")
-        response = self.openai.chat.completions.create(
+        self.log("Frontier Agent is about to call DeepSeek with context including 5 similar products")
+        response = self.client.chat.completions.create(
             model=self.MODEL, 
             messages=self.messages_for(description, documents, prices),
             seed=42,

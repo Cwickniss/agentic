@@ -1,10 +1,10 @@
-# Hands-On LLM Engineering including Agentic AI Project
+# LLM Engineering Workshop including Agentic AI Project
 
 ## A repo for LLM Builders - Hands-on with LLMs and Agents
 
 ![Hands on LLM Engineering](handson.jpg)
 
-Welcome to the code to accompany the hand-on LLM engineering workshop.
+Welcome to the code to accompany the LLM Engineering Masterclass with Agents.
 
 ### A note before you begin
 
