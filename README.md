@@ -1,10 +1,10 @@
-# LLM Engineering Workshop including Agentic AI Project
+# LLM Engineering including Agentic AI Project
 
-## A repo for LLM Builders - Hands-on with LLMs and Agents
+## Hands-on with LLMs and Agents
 
 ![Hands on LLM Engineering](handson.jpg)
 
-Welcome to the code to accompany the LLM Engineering Masterclass with Agents.
+Welcome to the code to accompany the Hands-on LLM Engineering Live Event
 
 ### A note before you begin
 
@@ -13,7 +13,7 @@ https://www.linkedin.com/in/eddonner/
 
 If you'd like to go more deeply into LLMs and Agents:  
 - I'm running a number of [Live Events](https://www.oreilly.com/search/?q=author%3A%20%22Ed%20Donner%22) with O'Reilly and Pearson
-- I also have a comprehensive, hands-on 8-week [Mastering LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?referralCode=35EB41EBB11DD247CF54) course that builds this entire Agentic AI platform from the ground up, including RAG and fine-tuning.
+- I also have a comprehensive, hands-on 8-week [Mastering LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?referralCode=35EB41EBB11DD247CF54) course that builds this entire Agentic AI platform from the ground up (and more!), including RAG and fine-tuning.
 
 ## Pre-Setup: running Ollama locally with Open-Source
 
