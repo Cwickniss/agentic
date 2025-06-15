@@ -10,7 +10,7 @@ class MessagingAgent(Agent):
 
     name = "Messaging Agent"
     color = Agent.MAGENTA
-    MODEL = "claude-3-7-sonnet-latest"
+    MODEL = "claude-sonnet-4-20250514"
 
     def __init__(self):
         """
