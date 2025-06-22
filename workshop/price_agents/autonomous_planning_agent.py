@@ -106,7 +106,7 @@ Only notify the user for the one best deal. Then just respond OK to indicate suc
             return loop.run_until_complete(coro)
 
     async def go(self):
-        async with MCPServerStdio(params=files_params) as server:
+        async with MCPServerStdio(params=files_params, client_session_timeout_seconds=60) as server:
             file_tools = await server.list_tools()
             agent = Agent(name="Planner", instructions=self.system_message, model=self.MODEL, tools=self.get_tools(), mcp_servers=[server])
             reply = await Runner.run(agent, self.user_message)
