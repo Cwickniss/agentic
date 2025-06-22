@@ -29,3 +29,4 @@ bitsandbytes
 psutil
 setuptools
 speedtest-cli
+litellm

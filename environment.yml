@@ -40,3 +40,4 @@ dependencies:
     - setuptools
     - speedtest-cli
     - python-multipart
+    - litellm

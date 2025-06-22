@@ -12,8 +12,9 @@ I'm here to help you be most successful with your learning! If you hit any snafu
 https://www.linkedin.com/in/eddonner/
 
 If you'd like to go more deeply into LLMs and Agents:  
+- I also have intensive online courses that cover this material (and tons more) in much detail! An [8 week journey to LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?couponCode=AGENTIC_AI_MAY_25), and a [6 week journey to Agentic AI](https://www.udemy.com/course/the-complete-agentic-ai-engineering-course/?couponCode=AGENTIC_AI_25_JUNE).
+- If you're willing to put up with more of me, [this post](https://edwarddonner.com/2025/05/28/connecting-my-courses-become-an-llm-expert-and-leader/) explains my courses and how they fit together!
 - I'm running a number of [Live Events](https://www.oreilly.com/search/?q=author%3A%20%22Ed%20Donner%22) with O'Reilly and Pearson
-- I also have a comprehensive, hands-on 8-week [Mastering LLM engineering](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?referralCode=35EB41EBB11DD247CF54) course that builds this entire Agentic AI platform from the ground up (and more!), including RAG and fine-tuning.
 
 ## Pre-Setup: running Ollama locally with Open-Source
 
