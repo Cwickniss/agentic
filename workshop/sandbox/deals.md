@@ -1,10 +1,11 @@
-## Best Bargain Deal Found
+### Incredible Deal Alert: Vizio 50" 4K HDR Smart TV
 
-**Apple iPhone 12 Pro (Refurbished)**  
-- **Description:** Premium refurbished smartphone with advanced camera, 5G support, OLED display, and a one-year warranty.  
-- **Deal Price:** $290.12  
-- **Estimated True Value:** $627.00  
-- **Discount:** $336.88 off (54% below estimated value)  
-- **Deal Link:** [View Deal](https://www.dealnews.com/Refurb-Smartphones-at-eBay-Up-to-80-off-free-shipping/21756193.html?iref=rss-c142)
+- **Model:** Vizio V4K50S-0809 
+- **Screen Size:** 50-inch, 4K (3840 x 2160) HDR Smart TV
+- **Features:** Dolby Vision Bright+, HDR10+, HDR10, HLG, Bluetooth listening, Dolby Atmos sound, VIZIO Mobile app integration
+- **Deal Price:** $198.00
+- **Estimated True Value:** $562.50
+- **Savings:** $364.50
+- **URL:** [Check the Deal Here](https://www.dealnews.com/products/Vizio/Vizio-50-Class-4-K-LED-HDR-Limited-Edition-Smart-TV/492341.html?iref=rss-c142)
 
------
+---
