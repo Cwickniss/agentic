@@ -1,11 +1,15 @@
-### Incredible Deal Alert: Vizio 50" 4K HDR Smart TV
+# Best Deal Today
 
-- **Model:** Vizio V4K50S-0809 
-- **Screen Size:** 50-inch, 4K (3840 x 2160) HDR Smart TV
-- **Features:** Dolby Vision Bright+, HDR10+, HDR10, HLG, Bluetooth listening, Dolby Atmos sound, VIZIO Mobile app integration
-- **Deal Price:** $198.00
-- **Estimated True Value:** $562.50
-- **Savings:** $364.50
-- **URL:** [Check the Deal Here](https://www.dealnews.com/products/Vizio/Vizio-50-Class-4-K-LED-HDR-Limited-Edition-Smart-TV/492341.html?iref=rss-c142)
+## Refurbished Unlocked Samsung Galaxy S22 (128GB)
+- Deal price: $145.00
+- Estimated true value: $499.50
+- Estimated savings: $354.50 (≈71% off)
+- Condition: Refurbished, unlocked, 1‑year Allstate warranty, free shipping
 
----
+Why this is compelling:
+- Flagship‑class Snapdragon 8 Gen 1 performance, WQHD+ display, and high‑end camera system at a budget price
+- Massive discount versus estimated market value for a refurbished unlocked unit with warranty
+
+Link: https://www.dealnews.com/products/Samsung/Unlocked-Samsung-Galaxy-S22-128-GB-Android-Smartphone/303992.html?iref=rss-c142
+
+_Last updated: 2025-10-18_

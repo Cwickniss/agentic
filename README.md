@@ -2,7 +2,7 @@
 
 ## Hands-on with LLMs and Agents
 
-![Hands on LLM Engineering](handson.jpg)
+![Hands on LLM Engineering](assets/handson.jpg)
 
 Welcome to the code to accompany the Hands-on LLM Engineering Live Event
 
@@ -12,7 +12,7 @@ I'm here to help you be most successful with your learning! If you hit any snafu
 https://www.linkedin.com/in/eddonner/
 
 If you'd like to go more deeply into LLMs and Agents:  
-- I have intensive online courses that cover this material, and tons more, with juicy commercial projects. An 8 week journey into all things LLM engineering, including RAG and fine-tuning. A 6 week adventure into Agentic AI. And a briefing for leaders and founders on building a valuable AI business. [This post explains my courses and curriculum](https://edwarddonner.com/2025/05/28/connecting-my-courses-become-an-llm-expert-and-leader/). Please do get in touch if you decide to take any of them.
+- I have intensive online courses that cover this material, and tons more, with juicy commercial projects. An 8 week journey into all things LLM engineering, including RAG and fine-tuning. A 6 week adventure into Agentic AI. A 4 week deep dive into deploying AI for Production on the cloud with AIOps. And a briefing for leaders and founders on building a valuable AI business. [This post explains my courses and curriculum](https://edwarddonner.com/2025/05/28/connecting-my-courses-become-an-llm-expert-and-leader/). Please do get in touch if you decide to take any of them.
 - I'm running a number of [Live Events](https://www.oreilly.com/search/?q=author%3A%20%22Ed%20Donner%22) with O'Reilly and Pearson
 
 ## Pre-Setup: running Ollama locally with Open-Source
@@ -28,9 +28,7 @@ Before the full setup, try installing Ollama so you can see results immediately!
 
 Hopefully I've done a decent job of making these guides bulletproof - but please contact me right away if you hit roadblocks:
 
-- PC people please follow the instructions in [SETUP-PC.md](SETUP-PC.md)
-- Mac people please follow the instructions in [SETUP-mac.md](SETUP-mac.md)
-- Linux people, the Mac instructions should be close enough!
+Full setup instructions are [here](setup/SETUP-new.md)
 
 ### An important point on API costs (which are optional! No need to spend if you don't wish)
 
@@ -48,7 +46,7 @@ You can use this as a direct replacement:
 
 Below is a full example:
 
-```
+```python
 # You need to do this one time on your computer
 !ollama pull llama3.2
 
