@@ -1,15 +1,10 @@
-# Best Deal Today
+# Today's Top Bargain Deal
 
-## Refurbished Unlocked Samsung Galaxy S22 (128GB)
-- Deal price: $145.00
-- Estimated true value: $499.50
-- Estimated savings: $354.50 (≈71% off)
-- Condition: Refurbished, unlocked, 1‑year Allstate warranty, free shipping
+## iRobot Roomba j7+ Self-Emptying Robot Vacuum (Certified Refurbished)
 
-Why this is compelling:
-- Flagship‑class Snapdragon 8 Gen 1 performance, WQHD+ display, and high‑end camera system at a budget price
-- Massive discount versus estimated market value for a refurbished unlocked unit with warranty
+- Price: $169.00
+- Estimated true value: ~$499.50
+- Estimated savings: ~$330.50 (≈66% off)
+- Why it’s compelling: Smart mapping and obstacle avoidance, self-emptying base reduces maintenance, and certified refurbished status offers strong value versus new.
 
-Link: https://www.dealnews.com/products/Samsung/Unlocked-Samsung-Galaxy-S22-128-GB-Android-Smartphone/303992.html?iref=rss-c142
-
-_Last updated: 2025-10-18_
+Deal link: https://www.dealnews.com/products/iRobot/iRobot-Roomba-j7-Self-Emptying-Robot-Vacuum/455442.html?iref=rss-f1912
